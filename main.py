@@ -11,7 +11,7 @@ def algorythm(row, matrix):
 
 # функция для key в sort()
 def last_value(matrix):
-    pass
+    return matrix[-1]
 
 
 # Ввод матрицы вручную
@@ -37,7 +37,13 @@ def matrix_generation(row, column):
 
 # Ввод размерности матрицы
 def input_matrix_dem():
-    pass
+    while True:
+        try:
+            row, column = map(int, (input("...").split()))
+            break
+        except Exception:
+            print("\nОшибка ввода\n")
+    return row, column
 
 
 # Вывод матрицы
@@ -50,7 +56,9 @@ def show_matrix(matrix, n, m):
 
 # Функция корректного присваивания типа int
 def int_input(inpt):
-    pass
+    if inpt.isdigit():
+        return int(inpt)
+    return 0
 
 
 def main():
